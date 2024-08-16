@@ -1,6 +1,6 @@
 # Glitch Bunny
-### To run:
-__Linux__:
+The Glitch Bunny is a multi-effect audio plugin with an interactive 3D bunny.
+### Run on Linux:
 This project builds through cmake. JUCE requires the following packages for compilation:
 ```
 libasound2-dev
@@ -19,7 +19,7 @@ libwebkit2gtk-4.0-dev
 libglu1-mesa-dev
 mesa-common-dev
 ```
-Next, create a build directory and run cmake:
+Next, create a build directory in the project folder and run cmake:
 ```
 mkdir build
 cmake -S . -B build
