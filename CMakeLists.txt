@@ -7,12 +7,6 @@ set(CMAKE_CXX_STANDARD 20)
 set(LIB_DIR ${CMAKE_CURRENT_SOURCE_DIR}/libs)
 include(cmake/cpm.cmake)
 
-# Includes for juceaid
-include_directories(    /usr/include/freetype2  
-                        /usr/local/include/freetype2  
-                        /usr/include/libpng16
-)
-
 CPMAddPackage(
     NAME JUCE
     GITHUB_REPOSITORY juce-framework/JUCE
