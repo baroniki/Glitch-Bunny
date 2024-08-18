@@ -1,5 +1,5 @@
-#include "JuceWorkflow/PluginProcessor.h"
-#include "JuceWorkflow/PluginEditor.h"
+#include "GlitchBunny/PluginProcessor.h"
+#include "GlitchBunny/PluginEditor.h"
 
 //==============================================================================
 AudioPluginAudioProcessorEditor::AudioPluginAudioProcessorEditor (AudioPluginAudioProcessor& p)

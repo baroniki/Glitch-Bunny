@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include <JuceWorkflow/PluginProcessor.h>
+#include <GlitchBunny/PluginProcessor.h>
 
 namespace audio_plugin_test {
 TEST(AudioPlugin, Test1) {
