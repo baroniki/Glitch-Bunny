@@ -43,4 +43,6 @@ if(MSVC)
         PRIVATE
             _SILENCE_CXX23_ALIGNED_STORAGE_DEPRACATION_WARNING
     )
+else()
+    target_compile_options(${PROJECT_NAME} PRIVATE -Wall -Wextra -Wpedantic)
 endif()

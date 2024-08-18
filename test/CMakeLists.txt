@@ -21,5 +21,11 @@ target_link_libraries(${PROJECT_NAME}
         GTest::gtest_main
 )
 
+if (MSVC)
+    target_compile_options(${PROJECT_NAME} PRIVATE /Wall /WX)
+else()
+    target_compile_options(${PROJECT_NAME} PRIVATE -Wall -Wextra -Wpedantic)
+endif()
+
 include(GoogleTest)
 gtest_discover_tests(${PROJECT_NAME})
