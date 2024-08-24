@@ -3,12 +3,16 @@
 
 //==============================================================================
 AudioPluginAudioProcessorEditor::AudioPluginAudioProcessorEditor (AudioPluginAudioProcessor& p)
-    : AudioProcessorEditor (&p), processorRef (p)
+    :   AudioProcessorEditor (&p), 
+        processorRef (p),
+        DebugLogger (juce::FileLogger::createDefaultAppLogger("GlitchBunnyLogger", "GlitchBunnyLog.txt", "PLUGIN EDITOR LOGS")),
+        BackgroundImage (juce::ImageFileFormat::loadFrom(juce::File::getCurrentWorkingDirectory().getChildFile("plugin/assets/BG/BG@1x.png")))
 {
     juce::ignoreUnused (processorRef);
     // Make sure that before the constructor has finished, you've set the
     // editor's size to whatever you need it to be.
-    setSize (400, 300);
+
+    setSize (810, 480); // 21:16 ratio
 }
 
 AudioPluginAudioProcessorEditor::~AudioPluginAudioProcessorEditor()
@@ -18,12 +22,8 @@ AudioPluginAudioProcessorEditor::~AudioPluginAudioProcessorEditor()
 //==============================================================================
 void AudioPluginAudioProcessorEditor::paint (juce::Graphics& g)
 {
-    // (Our component is opaque, so we must completely fill the background with a solid colour)
-    g.fillAll (getLookAndFeel().findColour (juce::ResizableWindow::backgroundColourId));
-
-    g.setColour (juce::Colours::white);
-    g.setFont (15.0f);
-    g.drawFittedText ("I love devin :-)", getLocalBounds(), juce::Justification::centred, 1);
+    // add background image
+    g.drawImage(BackgroundImage, getLocalBounds().toFloat());
 }
 
 void AudioPluginAudioProcessorEditor::resized()

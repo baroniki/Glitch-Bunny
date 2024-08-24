@@ -1,6 +1,9 @@
 #pragma once
 
-#include "PluginProcessor.h"
+#include <JuceHeader.h>
+#include <memory>
+
+#include "GlitchBunny/PluginProcessor.h"
 
 //==============================================================================
 class AudioPluginAudioProcessorEditor final : public juce::AudioProcessorEditor
@@ -17,6 +20,10 @@ private:
     // This reference is provided as a quick way for your editor to
     // access the processor object that created it.
     AudioPluginAudioProcessor& processorRef;
+
+    std::unique_ptr<juce::FileLogger> DebugLogger;
+
+    juce::Image BackgroundImage;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (AudioPluginAudioProcessorEditor)
 };
