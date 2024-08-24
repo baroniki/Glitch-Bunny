@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.22)
 
-project(GlitchBunny)
+project(GlitchBunnyProject)
 
 set(CMAKE_CXX_STANDARD 20)
 

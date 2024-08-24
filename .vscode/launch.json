@@ -7,7 +7,7 @@
         "name": "Run Standalone",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/plugin/AudioPlugin_artefacts/Debug/Standalone/Glitch Bunny", // Path to the executable
+            "program": "${workspaceFolder}/build/plugin/GlitchBunny_artefacts/Debug/Standalone/Glitch Bunny", // Path to the executable
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",

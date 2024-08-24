@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.22)
 
-project(AudioPluginTest)
+project(GlitchBunnyTest)
 
 enable_testing()
 
@@ -17,7 +17,7 @@ target_include_directories(${PROJECT_NAME}
 
 target_link_libraries(${PROJECT_NAME}
     PRIVATE
-        AudioPlugin
+        GlitchBunny
         GTest::gtest_main
 )
 
