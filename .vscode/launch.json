@@ -22,5 +22,27 @@
                 }
             ],
             "preLaunchTask": "build"
-    } ]
+    },
+    {
+        "name": "Run Standalone MacOS",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/build/plugin/GlitchBunny_artefacts/Standalone/Glitch Bunny.app/Contents/MacOS/Glitch Bunny", // Path to the executable
+        "args": [],
+        "stopAtEntry": false,
+        "cwd": "${workspaceFolder}",
+        "environment": [],
+        "MIMode": "lldb",
+        "logging": {
+            "trace": true,
+            "engineLogging": true,
+            "traceResponse": true,
+            "programOutput": true,
+            "exceptions": true
+        },
+        "osx": {
+            "MIMode": "lldb"
+        },
+        "preLaunchTask": "build"
+    }]
 }
