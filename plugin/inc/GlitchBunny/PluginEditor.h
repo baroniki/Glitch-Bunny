@@ -1,9 +1,9 @@
 #pragma once
 
-#include <JuceHeader.h>
 #include <memory>
 
 #include "GlitchBunny/PluginProcessor.h"
+#include "GlitchBunny/KnobComponent.h"
 
 //==============================================================================
 class AudioPluginAudioProcessorEditor final : public juce::AudioProcessorEditor
@@ -21,9 +21,13 @@ private:
     // access the processor object that created it.
     AudioPluginAudioProcessor& processorRef;
 
-    std::unique_ptr<juce::FileLogger> DebugLogger;
+    std::unique_ptr<juce::FileLogger> m_DebugLogger;
 
-    juce::Image BackgroundImage;
+    juce::File m_AssetsPath = juce::File::getCurrentWorkingDirectory().getChildFile("plugin/assets/");
+
+    juce::Image m_BackgroundImage;
+
+    KnobComponent m_Knob1;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (AudioPluginAudioProcessorEditor)
 };

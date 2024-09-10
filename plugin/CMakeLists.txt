@@ -16,6 +16,7 @@ target_sources(${PROJECT_NAME}
     PRIVATE
         src/PluginEditor.cpp
         src/PluginProcessor.cpp
+        src/KnobComponent.cpp
 )
 
 target_include_directories(${PROJECT_NAME}
